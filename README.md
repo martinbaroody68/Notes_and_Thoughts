@@ -1,2 +1,2 @@
 ## Welcome to Martin's site
-### But it is under construction
+Visit https://martinbaroody68.github.io/Notes_and_Thoughts/
