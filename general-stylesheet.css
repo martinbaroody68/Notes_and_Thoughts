@@ -1,20 +1,7 @@
-p {
-  line-height: 1.6;
-  margin: auto;
-  width: 70%;
-  font-size: 1.3em;
-}
 
 body {
     line-height: 1.6;
     margin: auto;
-    width: 70%;
-    font-size: 1.3em;
-}
-
-h4 {
-    line-height: 1.6;
-    margin: auto;
-    width: 70%;
+    width: 50%;
     font-size: 1.3em;
 }
