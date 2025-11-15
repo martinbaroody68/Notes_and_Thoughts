@@ -1,0 +1,22 @@
+Martin pensees 23/05/23
+
+(…) Immense curiosity for things. Study things for their intrinsic intellectual and interest value, and not for “practical use”. Application: go through MIT OCW, whatever seems interesting.
+
+(…) Genes, DNA as consistent “code”. An “abstract representation” and ever evolving coding of how properties will emerge that will “well match” the environment. RNA and transcription as acting of this coding in situations. Proteins for explicit practical response and action in real world. Enables many concurrent traits in population that perhaps help and balance each other. Immensely complex system, influenced super strongly and made powerful by a compact abstract representation of a genome.
+
+Graph NN suffering from oversmpothing problem where all nodes end up encoded the same — from HF article “prevents scaling up like transformers can”. Interestingly enough I had a transformer over smoothing problem past some layers. It arose with my time series model due to (a) initial embeddings being very associated and (b) normalization (batchnorm). Obviously adding more nonlinearities helped too. Transformers do not run into such problems because initial embeddings are already very separated “word embeddings”. I doubt current GNN’s have such similar initial formulations.
+
+“Graph positional encoding” — perhaps all graph paths in Wikipedia from general category to lower level category, involving separate “concepts” and hierarchical levels, define a consistent set of “positions” across branches. For example, one level and concept type has the same “position” to be encoded…
+
+Mme Bovary - interesting narrator perspective (judgemental and denigrating in detailed observations of shyer, poorer person —- clear class difference), higher class has same common standard in useless “rebellious” showcase (throwing cap , with a useless detail of “dust” shared by narrator) vs. lower class student demonstrating “weakened, disciplined subjugation” to an accepted “ideal” societal standard of dutifulness. Ironically one would expect the opposite of high class acting dutiful, respectable, disciplined to their own ideal societal standard and the lower class to be more “rebellious” but the lower class new student is already bullied and treated like an outsider for his piety and obedience.
+
+Literature as scaffold for learning a new language
+
+Roots of words are very interesting. In French: cou (neck), coude (elbow) — “cou” as connection. RéCOUperer - re-connect something external to one’s domain. Couper - severe a connection. Coup (coup de poing etc.) - forceful and quick connection of an object to another. Cour du roi - close connections to royalty. Courier - delivering mail, connecting a person to a communication. Couler (leak) - breaking and gap in a connected path, leading to a divergent path.
+
+ML “adaptive” and can update online in terms of observed behaviour - look into
+
+Example: automated Tinder swiper — looks at user preferences (left/right swipes as “ground truth”) and try to match to girls’ photos and bio to get a “user preference function”
+note: “class imbalance” and over sampling matter mostly because NN gradient descent “unifies” the classes in terms of its representation; I.e. the exact same model weights directly predicting class distribution and that’s the end of the story. A “matching” paradigm might help here: I.e. have related yet separate conceptions/adaptive representations for each class and match example’s representation to the one that fits most. Classes are much more intrinsically balanced here
+
+No need to store entire graph representation of external knowledge (Wiki) in separate database. Model can have ability to “hop” across actual Wiki and form a graph in RAM as it goes along this example. Have cache as needed. Saves a TON of memory. Obviously have internal “actor” representation and function saved separately.
