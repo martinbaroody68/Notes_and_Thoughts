@@ -1,0 +1,21 @@
+19/09/22
+
+Work like a maniac
+
+Discipline
+
+Social — learn through observation, simulation
+
+LEARNING
+
+Causal ML
+
+Thoughts
+
+Correlational/traditional ML use case: predict for new entities. I.e. you have a fresh data sample, separate from others, and you want to predict some function of it
+
+Causal: seems to be useful for mapping out structure of a changing system. I.e. you can modify a component of the system and model how the downstream states of the system would change.
+
+An emphasis is placed on the ability to evaluate counterfactuals, i.e. retrospectively modifying the value of a component in the system, and seeing the effect of the change on the results. Although this is touted as an advantage over traditional ML, it seems like traditional ML also has this capability baked in. For a given data point X, you can modify one of the features x and the predicted target(s) should change accordingly. Perhaps the causal version with counterfactuals allows for more information and structure to be integrated or something.
+
+Structural causal model formulation, which is a DAG where each component’s parents are its causes, and the value of each component is a function of its parents and unobserved dynamics, represented as exogenous noise. The DAG assumes a Markov property. Meaning that the conditional distribution of a component is independent from other components, given the values of its parents/direct causes.

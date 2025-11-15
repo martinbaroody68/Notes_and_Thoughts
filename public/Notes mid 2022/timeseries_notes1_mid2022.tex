@@ -1,0 +1,17 @@
+10/07/22
+
+—TODO—
+
+Work on time series project
+Research RL
+Read about real analysis
+Read about probability
+
+—NOTES—
+Add bias to projections of input... or else 0’s will always project to 0
+
+Hmmm notice if first position in decoder is null, the null mask will set it to -inf. It will appear as 0 in computations. But then the first position will be set to -inf as well as all the other positions due to causal masking, leading to nan after the softmax step. Check to see whether this is the root of the bug.
+
+Instead we could modify the null mask to have 0 in first row first column at all times. I.e. even if first time step is null, don’t let it mask itself. The result will be ignored by all other computations anyway... at least within the decoder self attention. Note that this would probably lead to a faulty decoding for the first time step after the dec-enc attention...
+
+Perhaps in general, instead of having each null decoder time step ignore itself in the dec self attn, what if we allow each null time step to attend to itself. Its embedding at the first layer will be zeros anyway plus the pos embedding, meaning only the pos embedding will arrive as input. I guess we can try doing this, I don’t know if this will positively affect the decoder output at that time step but at least it deals with the above problem at the first time step. On top of that it allows more info to be integrated at later layers instead of simply discarding the time step completely. Still, other (later) time steps will not be using the information from the null time step, it will remain masked out for those positions, because there is no information to be gained from attending to it
