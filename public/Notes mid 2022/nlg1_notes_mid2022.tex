@@ -1,0 +1,72 @@
+Natural Language Generation
+
+
+Text generation
+
+Perhaps leverage GAN idea to match some style
+
+Ideally a text sequence should be valid long term and short term
+
+Many possible ways to have a valid sentence/paragraph that satisfies a semantic or conceptual direction (long term) while maintaining short term coherence (grammar, linguistics, language quirks) and perhaps even changing semantic direction in a valid way
+
+Perhaps create encoding of context words that represents long term semantic direction implied by the context. Next word is generated using both a representation of the context (RNN/transformer modelling of short term dynamics) and the long term direction encoding. Somehow enforce that the generated words should match with the long term direction. This can be complicated.
+
+Stage 1 model is normal cross entropy loss minimization
+
+Perhaps have another model that evaluates coherence.
+
+In other words optimize model to output 1 if a given sequence of text is “natural language” (which we assume is always true of our training set and that everything there is coherent) and 0 if incoherent (create synthetic dataset consisting of random word sequences or rearranged/pruned/words replaced with random word or random word added to data etc versions of training data).
+
+In other words a GAN type construction for coherence.
+
+Now further train model to fool the discriminator.
+
+So now cross entropy loss serves as a prior
+
+Hopefully result is more coherent and flexible
+
+CE loss counterbalances semantic validity (which can be assumed if CE is low across training data) with pull towards exact (soft) matching of words which stifles creativity a bit
+
+Ok once this GAN training yields good results, with both discriminator and generator functioning, we can try generating sentences and qualitatively assessing them.
+
+The next stream is generating text in a specific style. Perhaps we can use the generator we trained previously as a prior and have another GAN with the same setup as before which marks sentences as valid or “belonging to a group”. For this specific group one, we can include negative examples from a separate dataset so we can discriminate against semantically and linguistically valid sentences that are not in the group per se.
+
+Perhaps in coherence stage or any GAN discriminator training it would make sense to “autoencode” or do some dimensionally reduction to distill relevant coherent features. In other words create a bottleneck which then gets classified.
+
+Think of using a base statistical n-gram type model as prediction probability priors over vocab. Tune the prior as necessary. Also perhaps allow for flexibility of prior distribution importance using features of the prior distribution such as information (how peaky it is). This prior idea would be most relevant for initial general language modelling. Perhaps could be useful during the style discrim stage to act as prior for target style. Need to consider how this prior would be applied. If we multiply weights by prior then predict this will lead to the weights being dependent on the prior and the efficacy of the weights would be lost under a different prior or if we remove the prior. It would make more sense to use the prior as a regularizer in the loss.
+
+Review NLG notes on notepad (use GAN with word embeddings) but another idea: evaluate generator loss one generated token at a time in the auto regression.
+
+
+
+
+
+
+
+
+
+
+
+
+___________
+
+
+
+
+
+Speech recognition
+
+Look into:
+
+Self supervised learning
+- BERT
+- HuBERT
+- LLM distillation (TinyBERT)
+
+
+________
+
+Project idea: video summarization?
+
+First step:
+Look into speech recognition and text summarization

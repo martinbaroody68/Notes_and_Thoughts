@@ -1,0 +1,8 @@
+03/08/2022
+
+McDonald’s 796
+
+Dilated conv across past seasons? Think about this
+
+
+Beam search represents sentence probability in a misleading way.... what if you incorrectly predict word 1 with the highest confidence... it is very possible that word 2 conditioned on word 1 has a high probability even if the model outputs a low score for it, due to the softmax operation which scales every possible path equally. The point is it doesn’t totally represent the true prob of a sentence given the model.
