@@ -29,13 +29,19 @@
 
     Recall the real numbers have the same cardinality as the set of infinite binary strings. Thus the natural numbers have the same cardinality as the real numbers.
 
-    So where is the confusion? First of all it must be said that there is no contradiction with Cantor's proof, rather it is a different lens, because indeed the real numbers do have a different property than the natural/rational numbers, especially as to how they are generated. This is for a later topic. Anyway, one can view a proof that the real numbers in fact cannot be bijectively mapped to the natural numbers.
+    So where is the confusion? For a century it has been assumed that these real numbers are uncountable. Indeed the real numbers do have a different property than the natural/rational numbers, especially as to how they are generated. I believe this is due to faulty proofs, and certain jumpps in the definitions of the real numbers systems and problems in defining and generating irrational numbers. For now I shall stick to laying out one such proof, and explaining why it does not rigorously hold.
 
-    The argument is that one can use the nested interval property to show that one cannot put the real numbers into a list indexed by natural numbers. Here is the argument: let's say you put all the real numbers into a list. {r1, r2, r3, ...}. Now go across the natural numbers, and inductively perform the following operations:
+    I will post images of my work, due to mathematical notation.
+
+    <img src="IMG_0054.jpeg">
+
+    <img src="IMG_0055.jpeg">
+
+    <img src="IMG_0056.jpeg">
 
     (to be continued)
 
-
+    (I have found many more profound and sophisticated ways to explore this - both to prove that the real numbers are mappable to the natural numbers, and that the previous "proofs" otherwise have some flaw. I have already consolidated these, will upload them eventually)
 
     
     
