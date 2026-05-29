@@ -46,10 +46,6 @@
 
 - Memory as vibrations
 
-- Real numbers are countable
-
-- Chinese characters - magic properties, stroke order
-
 
 
 
